@@ -72,10 +72,7 @@
     "airtime": "21:00",
     "airstamp": "2011-05-09T01:00:00+00:00",
     "runtime": 60,
-    "image": {
-      "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/1/2673.jpg",
-      "original": "http://static.tvmaze.com/uploads/images/original_untouched/1/2673.jpg"
-    },
+    "image": null,
     "summary": "<p>Tyrion stops at Winterfell on his way home and gets a frosty reception from Robb Stark. Eddard's investigation into the death of his predecessor gets underway.</p>",
     "_links": {
       "self": {
