@@ -91,11 +91,3 @@ input {
   padding: 10px;
   margin: 10px 10px 0 10px;
 }
-
-#filterSummary::before {
-  content: "found ";
-}
-
-#filterSummary::after {
-  content: " episodes";
-}
