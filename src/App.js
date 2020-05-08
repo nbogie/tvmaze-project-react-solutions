@@ -1,11 +1,3 @@
-//Known issues: 
-// Wrongly assumes all episodes have images (correct for G.o.T. data)
-// Intentionally keeps all components in a single file
-//
-// TODO Can we delete service worker?
-//
-// TODO Best way to fix/remove tests?
-
 import React from 'react';
 
 import './App.css';
@@ -46,6 +38,8 @@ function Episode(props) {
     </div>
   );
 }
+//The above assumes all episodes have images (not true for ALL shows).
+
 
 
 function Footer() {
