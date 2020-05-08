@@ -1,27 +1,29 @@
 import React from "react";
 
 import Header from './Header.js';
-import EpisodeList from './EpisodeList.js';
 import Footer from './Footer.js';
+import SearchableEpisodeList from './SearchableEpisodeList';
 
-import EpisodesData from './EpisodesData.json';
+import AllEpisodesData from './EpisodesData.json';
 
 import './App.css';
 
 
 function App() {
-
   return (
 
     <div className="App">
+
       <Header />
 
+      <SearchableEpisodeList episodes={AllEpisodesData} />
 
-      <EpisodeList episodes={EpisodesData} />
       <Footer />
+
     </div>
   );
 }
+
 
 
 export default App;

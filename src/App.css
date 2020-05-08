@@ -1,3 +1,5 @@
+/* Many css bad practices here - do not copy! */
+
 * {
   box-sizing: border-box;
 }
@@ -67,4 +69,33 @@ p {
   .card {
     flex: 1 1 calc(33% - 2rem);
   }
+}
+
+h1 button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 10px 0 10px;
+}
+
+#controlPanel {
+  display: flex;
+}
+
+.control {
+  padding: 10px;
+  margin: 10px 10px 0 10px;
+}
+
+#filterSummary::before {
+  content: "found ";
+}
+
+#filterSummary::after {
+  content: " episodes";
 }
