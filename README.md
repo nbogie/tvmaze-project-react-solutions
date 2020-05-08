@@ -1,3 +1,5 @@
+This is another solution in React to level 100, but modified to have one component per file - a common practice in React development.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
