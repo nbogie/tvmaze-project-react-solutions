@@ -47,7 +47,7 @@ function TVShowsList(props) {
                     id="searchInput"
                     className="control"
                     type="text"
-                    placeholder="search for a show"
+                    placeholder="search for a show or genre"
                     value={query}
                     onChange={event => setQuery(event.target.value)}
                 />
@@ -58,7 +58,7 @@ function TVShowsList(props) {
             </div>
 
             <div>
-                <ul>
+                <ul className="show-list">
                     {filteredShows.map(item => (
                         <TVShow
                             show={item}
