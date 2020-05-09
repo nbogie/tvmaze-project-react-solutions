@@ -12,6 +12,10 @@ Each level is in its own **branch** in this repo, but is also deployed separatel
 - [level-400 source](https://github.com/nbogie/tvmaze-project-react-solutions/tree/level-400) and [level-400 deployed](https://cyf-tv-level-400-react-solution.netlify.app/)
 - [level-500 source](https://github.com/nbogie/tvmaze-project-react-solutions/tree/level-500) and [level-500 deployed](https://cyf-tv-level-500-react-solution.netlify.app/)
 
+Bonus oddities:
+
+- [p5js-loader source](https://github.com/nbogie/tvmaze-project-react-solutions/tree/p5js-loader) and [p5js-loader deployed](https://cyf-tv-p5js-loader-react-solution.netlify.app/) (Don't do animations this way.)
+
 ## General Notes
 
 ### No React idioms in early levels:
