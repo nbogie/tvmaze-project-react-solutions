@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import LoaderSketch from './LoaderSketch.js';
 import EpisodeListSearchable from './EpisodeListSearchable';
 
 
@@ -26,13 +27,15 @@ function EpisodeListFetched(props) {
         //Note: we should handle errors here
         const json = await result.json();
         setEpisodes(json);
+        //artificially wait another 5 seconds - to enjoy the loading screen!
+        await new Promise((res, rej) => setTimeout(res, 5000))
         setLoading(false);
     };
 
-    return loading ?
-        <div className="loading" > Loading episodes...</div>
-        : <EpisodeListSearchable episodes={episodes} />;
+    // WAS: <div className="loading" > Loading episodes...</div>
+    return loading ? <LoaderSketch /> : <EpisodeListSearchable episodes={episodes} />;
 }
+
 
 
 export default EpisodeListFetched;

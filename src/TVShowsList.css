@@ -42,3 +42,14 @@ figure {
   border-radius: 3px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
 }
+
+.loader-sketch {
+  width: 100%;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+.p5Canvas {
+  margin: 0 auto;
+  border-radius: 10px;
+}
