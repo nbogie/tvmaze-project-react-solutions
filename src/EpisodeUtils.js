@@ -10,8 +10,10 @@ function pad(num) {
 }
 
 
-function imgSrcFor(episodeOrShow) {
-    return episodeOrShow.image ? episodeOrShow.image.medium : "https://placekitten.com/300/200";
+function imgSrcFor(episodeOrShow, isAlone = false) {
+    return isAlone ?
+        episodeOrShow.image ? episodeOrShow.image.original : "https://placekitten.com/600/402" :
+        episodeOrShow.image ? episodeOrShow.image.medium : "https://placekitten.com/300/200";
 }
 
 
