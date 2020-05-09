@@ -1,56 +1,75 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import Header from './Header.js';
 import Footer from './Footer.js';
-import SearchableEpisodeList from './SearchableEpisodeList';
+import EpisodeListFetched from './EpisodeListFetched';
+import AllShowsData from './ShowsData.json'
 
 import './App.css';
 
-
 function App() {
 
-  //STATE HOOK: the fetched episodes - initially none
-  const [episodes, setEpisodes] = useState([]);
+  const [selectedShow, setSelectedShow] = useState(getDefaultShow());
 
-  //STATE HOOK: boolean - is the data loading or not?
-  const [loading, setLoading] = useState(false);
+  function getDefaultShow() {
+    const idealShow = AllShowsData.find(show => show.id === 169);
+    return idealShow ? idealShow : AllShowsData[0];
+  }
 
-  //EFFECT HOOK: Fetch episodes from API on component mount, only.
-  useEffect(() => {
-    fetchEpisodesForShow(179)
-  }, []); //Note: IMPORTANT don't forget [] as last param so 
-  //      that useEffect does not execute on any state change
-  //      (INCLUDING the one it instigates)
-
-
-
-  async function fetchEpisodesForShow(showId) {
-    setLoading(true);
-    const result = await fetch(`https://api.tvmaze.com/shows/${showId}/episodes`);
-    //Note: we should handle errors here
-    const json = await result.json();
-    setEpisodes(json);
-    setLoading(false);
-  };
-
+  function handleShowSelected(id) {
+    const foundShow = AllShowsData.find(show => show.id === Number(id));
+    if (foundShow) {
+      setSelectedShow(foundShow);
+    }
+  }
 
   return (
 
-    <div className="App">
+    <div className="App" >
 
       <Header />
 
-      {
-        loading ?
-          <div className="loading">Loading episodes...</div>
-          :
-          <SearchableEpisodeList episodes={episodes} />
-      }
+      <div className="showHeading">
+        <div className="showTitleTop">{selectedShow.name}</div>
+
+        {/*Show selector*/}
+        <select
+          className="control"
+          onChange={event => handleShowSelected(event.target.value)}
+          value={selectedShow.id} >
+          {
+            //create the options within the select
+            sortedShowsByName(AllShowsData).map(show =>
+              <option
+                key={show.id}
+                value={show.id}>
+                {show.name}
+              </option>)
+          }
+        </select>
+      </div>
+
+
+
+      <EpisodeListFetched showId={selectedShow.id} />
 
       <Footer />
 
     </div>
   );
+}
+
+
+function sortByRating(shows) {
+  shows.sort((a, b) => b.rating.average - a.rating.average);
+  return shows;
+}
+
+
+function sortedShowsByName(shows) {
+  //Assumes all shows have a string name.
+  //make a copy so we don't mutate given list
+  return [...shows].sort((a, b) => a.name.localeCompare(b.name));
 }
 
 
