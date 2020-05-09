@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeEpisodeCode, stripTags, imgSrcFor } from './EpisodeUtils';
+import { makeEpisodeCode, stripTags, imgSrcFor, toHTTPS } from './EpisodeUtils';
 
 
 function Episode(props) {
@@ -10,7 +10,7 @@ function Episode(props) {
             <h1>{props.episode.name} - {makeEpisodeCode(props.episode)}</h1>
             <img
                 className="episode"
-                src={imgSrcFor(props.episode, isAlone)}
+                src={toHTTPS(imgSrcFor(props.episode, isAlone))}
                 alt="screengrab of episode"
             />
             <p>{stripTags(props.episode.summary)}</p>

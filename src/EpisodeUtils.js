@@ -40,4 +40,11 @@ function stripTags(str) {
 function pluralize(word, number) {
     return number === 1 ? word : word + "s"
 }
-export { makeEpisodeCode, stripTags, imgSrcFor, pluralize };
+
+function toHTTPS(str) {
+    if (!str) {
+        return str;
+    }
+    return str.replace(/^http:/, "https:");
+}
+export { makeEpisodeCode, stripTags, imgSrcFor, pluralize, toHTTPS };
