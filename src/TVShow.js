@@ -1,5 +1,5 @@
 import React from "react";
-import { stripTags, imgSrcFor } from './EpisodeUtils.js';
+import { stripTags, imgSrcFor, toHTTPS } from './EpisodeUtils.js';
 
 
 function TVShow(props) {
@@ -13,7 +13,7 @@ function TVShow(props) {
 
             <div className="three-panels">
                 <figure className="panel panel-one">
-                    <img src={imgSrcFor(show)} alt={show.name} />
+                    <img src={toHTTPS(imgSrcFor(show))} alt={show.name} />
                 </figure>
                 <div className="panel panel-two">
                     {stripTags(show.summary)}
