@@ -1,0 +1,72 @@
+.show h1 {
+  font-size: 3rem;
+  margin: 0px 0px 10px 10px;
+}
+a {
+  text-decoration: none;
+  color: #202020;
+}
+.show {
+  //background: #c0e0d0;
+  padding: 10px;
+  margin: 20px 0px;
+  box-shadow: 4px 4px 10px 2px #ccc;
+  border-radius: 5px;
+  //border: 2px solid gray;
+}
+
+figure {
+  min-width: 160px;
+  margin: 0;
+}
+
+.three-panels {
+  display: flex;
+}
+.panel {
+  margin: 10px;
+}
+.panel-three {
+  min-width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.info-key {
+  font-weight: bold;
+}
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+#loadingNotice {
+  padding: 200px;
+  font-size: 5rem;
+  margin: 100px;
+  border: 10px solid black;
+  border-radius: 20px;
+}

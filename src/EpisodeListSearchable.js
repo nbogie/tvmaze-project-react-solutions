@@ -10,7 +10,7 @@
 
 import React, { useState, useEffect } from 'react';
 import EpisodeList from './EpisodeList.js';
-import { makeEpisodeCode } from './EpisodeUtils';
+import { makeEpisodeCode, pluralize } from './EpisodeUtils';
 
 function SearchableEpisodeList(props) {
 
@@ -143,8 +143,5 @@ function contains(a, b) {
     );
 }
 
-function pluralize(word, number) {
-    return number === 1 ? word : word + "s"
-}
 
 export default SearchableEpisodeList;
