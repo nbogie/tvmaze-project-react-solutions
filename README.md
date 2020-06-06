@@ -1,6 +1,6 @@
 # What's this?
 
-This is a set of solutions _in React_ to the various levels of the [tv-show-dom-project](https://github.com/CodeYourFuture/syllabus/tree/master/js-core-3/tv-show-dom-project) challenge.
+This is Neill's set of solutions _in React_ to the various levels of the [tv-show-dom-project](https://github.com/CodeYourFuture/syllabus/tree/master/js-core-3/tv-show-dom-project) challenge.
 
 Each level is in its own **branch** in this repo, but is also deployed separately to netlify. (Right now, you're probably looking at the master branch.)
 
@@ -15,6 +15,11 @@ Each level is in its own **branch** in this repo, but is also deployed separatel
 Bonus oddities:
 
 - [p5js-loader source](https://github.com/nbogie/tvmaze-project-react-solutions/tree/p5js-loader) and [p5js-loader deployed](https://cyf-tv-p5js-loader-react-solution.netlify.app/) (Don't do animations this way.)
+
+
+## Other solutions:
+
+You can find [Ahmad's alternative solution here](https://github.com/ahmad-ali14/tv-shows-react-hooks).
 
 ## General Notes
 
